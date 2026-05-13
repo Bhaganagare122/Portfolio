@@ -5,9 +5,10 @@ const closeMenuBtn = document.getElementById('close-menu');
 
 const skillsTab = document.getElementById('skills');
 const worksTab = document.getElementById('works');
+const educationTab = document.getElementById('education-tab');
 const sayHelloBtn = document.getElementById('say-hello');
 
-const devWorksContainer = document.getElementById('works-as-a-developer');
+const devWorksContainer = document.getElementById('works-as-a-cloud-engineer');
 const writerWorksContainer = document.getElementById('works-as-a-writer');
 const developerBtn = document.getElementById('developer-btn');
 const writerBtn = document.getElementById('writer-btn');
@@ -43,8 +44,8 @@ function tabIsClicked(element){
 }
 tabIsClicked(skillsTab);
 tabIsClicked(worksTab);
+tabIsClicked(educationTab);
 tabIsClicked(sayHelloBtn);
-
 //Developer btn is clicked
 developerBtn.addEventListener('click', () => {
     developerBtn.classList.add('colored-btn');

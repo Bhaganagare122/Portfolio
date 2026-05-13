@@ -202,19 +202,21 @@ button {
     box-shadow: 0 3 10px 10px black;
     background-color: white;
 }
-
 .pattern {
     position: fixed;
-    /* border: 1px solid var(--yellow); 
-    top: 55%; */
-    left: -50px;
-    bottom: 0;
-    width: 70%;
-    max-width: 750px;
-    height: 300px;
-    background: url(images/backdrop.png) no-repeat;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    height: 100vh;
+
+    transform: translateX(-50%);
+
+    background: url(images/tron.png) no-repeat;
     background-size: cover;
-    background-position: bottom left;
+    background-position: center center;
+
     opacity: 0.1;
     z-index: -1;
 }
@@ -263,8 +265,13 @@ button {
     width: 400px;
 }
 .nav-skills,
-.nav-resume 
+.nav-resume, 
 .nav-exp{
+    color: var(--text-color);
+    font-size: 13px;
+    margin-left:40px;
+}
+.nav-education{
     color: var(--text-color);
     font-size: 13px;
     margin-left:40px;
@@ -307,7 +314,7 @@ button {
     height: 200px;
     margin: 0 auto;
     margin-bottom: var(--md-space);
-    background: url(images/pp.png) no-repeat;
+    background: url(images/Rushikesh.png) no-repeat;
     background-size: 120px;
     background-position: center;
     background-color: var(--light-purple);
@@ -434,21 +441,21 @@ hr {
     background-size: 100%;
     background-position: center;
 }
-.html-logo {
+.ec2-logo {
     /* background-color: #ff8528; */
-    background: url(images/skills-icons/html.png) no-repeat;
+    background: url(images/skills-icons/EC2.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.javacsript-logo {
+.auto_scaling-logo {
     /* background-color: #FFDA61; */
-    background: url(images/skills-icons/javascript.png) no-repeat;
+    background: url(images/skills-icons/EC2_Auto_Scaling.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.css-logo {
+.lambda-logo {
     /* background-color: rgb(35, 49, 255); */
-    background: url(images/skills-icons/css.png) no-repeat;
+    background: url(images/skills-icons/Lambda.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
@@ -462,27 +469,33 @@ hr {
 /* .api-logo {
     background-color: #00b66a;
 } */
+ .linux-logo {
+    /* background-color: rgb(35, 49, 255); */
+    background: url(images/skills-icons/linux.png) no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
 .git-logo {
     /* background-color: #f82953; */
     background: url(images/skills-icons/git.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.solidity-logo {
+.github-logo {
     /* background-color: #0065bd; */
-    background: url(images/skills-icons/solidity.svg) no-repeat;
+    background: url(images/skills-icons/GitHub.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.react-logo {
+.gitlab-logo {
     /* background-color: #af2ac4; */
-    background: url(images/skills-icons/react.png) no-repeat;
+    background: url(images/skills-icons/GitLab.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.dsa-logo {
+.jenkins-logo {
     /*background-color: #ff207d;
-    */background: url(images/skills-icons/dsa.jpg) no-repeat;
+    */background: url(images/skills-icons/Jenkins.png) no-repeat;
     background-size: 80%;
     background-position: center;
     border-radius: 0;
@@ -492,18 +505,34 @@ hr {
     -o-border-radius: 0;
 }
 
-.node-logo {
+.ansible-logo {
     /* background-color: #ff7eb4; */
-    background: url(images/skills-icons/node.jpg) no-repeat;
+    background: url(images/skills-icons/Ansible.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
-.kali-logo {
+.terraform-logo {
     /* background-color: #ff7eb4; */
-    background: url(images/skills-icons/kali.png) no-repeat;
+    background: url(images/skills-icons/Terraform.png) no-repeat;
     background-size: 80%;
     background-position: center;
 }
+
+.docker-logo {
+    /* background-color: #ff7eb4; */
+    background: url(images/skills-icons/Docker.png) no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.k8s-logo {
+    /* background-color: #ff7eb4; */
+    background: url(images/skills-icons/Kubernetes.png) no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+
 .timeline {
     width: 80%;
     height: auto;
@@ -545,6 +574,63 @@ hr {
     font-size: x-small;
 
   }
+
+  /* ----------------- EDUCATION -------------- */
+
+.education{
+    margin-bottom: var(--lg-space);
+}
+
+.education-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.education-card{
+    background-color: var(--light-purple);
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.education-card h3{
+    color: var(--yellow);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.edu-college{
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.edu-date{
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.education-card:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.education-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width:700px){
+
+    .education-box{
+        grid-template-columns: 1fr;
+    }
+
+}
 /* ----------------- WORKS  -------------- */
 .works-header {
     display: flex;
@@ -580,10 +666,10 @@ hr {
 }
 
 /* works as a developer */
-.works-as-a-developer {
+.works-as-a-cloud-engineer {
     display: non;
 }
-.works-as-a-developer,
+.works-as-a-cloud-engineer,
 .works-as-a-writer {
     /* border: 1px solid var(--yellow); */
     display: grid;
@@ -603,33 +689,18 @@ hr {
     cursor: pointer;
     margin:20px 20 20 20;
 }
-.ehs{
-    background: url(images/screenshots/ehs.jpg) no-repeat;
+.two_tier{
+    background: url(images/screenshots/docker_two_tier.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.signal{
-    background: url(images/screenshots/signal.jpg) no-repeat;
+.rds_bkp{
+    background: url(images/screenshots/rds_bkp.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.chit{
-    background: url(images/screenshots/Chit.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.resume{
-    background: url(images/screenshots/resume.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.editor{
-    background: url(images/screenshots/editor.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.nft{
-    background: url(images/screenshots/nft.jpg) no-repeat;
+.Data_ingestion{
+    background: url(images/screenshots/Data_ingestion.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
